@@ -1,3 +1,7 @@
+
+
+
+
 public class Essay extends GradedActivity {
 	// Private variables
 	private double grammar, spelling, correctLength, content;

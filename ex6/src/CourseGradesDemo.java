@@ -25,6 +25,8 @@ public class CourseGradesDemo
       
       // Create an object for the final exam.
       // 50 questions, 10 missed.
+      /*
+       */
       FinalExam finalExam = new FinalExam(50, 10);
       
       // Create a CourseGrades object.

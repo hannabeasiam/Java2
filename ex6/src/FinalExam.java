@@ -1,9 +1,5 @@
-/**
-   The Essay class stores data about a graded 
-   activity that is a final exam for the 
-   Analyzable Interface programming challenge.
-*/
 
+// An object of the FinalExam class is a GradedActivity object
 public class FinalExam extends GradedActivity
 {
    private int numQuestions;  // Number of questions
