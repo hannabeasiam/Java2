@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class VolvoGUI extends JFrame{
 	
-	private JPanel customerPanel,carPanel,paymentPanel,invoicePanel;
+	private JPanel customerPanel;
 	private JLabel customerLabel,acNLabel,acVLable,nameLabel,addressLabel,pNLabel;
 	private JTextField name,address,pNumber;
 	private JButton next;
@@ -18,6 +18,7 @@ public class VolvoGUI extends JFrame{
 		customerLabel = new JLabel("Customer Information");
 		acNLabel = new JLabel("Account Number");
 		acVLable = new JLabel(info.getAccount());
+		
 		nameLabel = new JLabel("Name");
 		addressLabel = new JLabel("Address");
 		pNLabel = new JLabel("Phone Number");
@@ -45,41 +46,47 @@ public class VolvoGUI extends JFrame{
 		
 		customerPanel.add(customerLabel);
 		next.addActionListener(new VolvoGUIListener());
-
 		customerPanel.add(next);
 		
 		add(customerPanel);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+
 		this.setSize(400, 400);
 		this.setVisible(true);
-		
-		
-		
-		
+
 		
 	}
 		
-	
+	/*
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//String account;
-		new VolvoGUI();
+		//void for test
+		//new VolvoGUI();
+		
+		//new CarGui();
 		
 		//Customer info = new Customer();
 		
 		//account = info.getAccount();
-	}
-	
+	}*/
+
 	private class VolvoGUIListener implements ActionListener{
     	public void actionPerformed(ActionEvent e){
-    		String cN,cAd,cPn;
-    			cN=name.getText();
-    			cAd=address.getText();
-    			cPn=pNumber.getText();
+    		String cAccount,cName,cAddress,cPnumber;
     			
-    			customerLabel.setText("name"+cN+"address"+cAd+"phone"+cPn);
+    			cAccount=acVLable.getText();
+    			cName=name.getText();
+    			cAddress=address.getText();
+    			cPnumber=pNumber.getText();
+    			
+    			//customerLabel.setText("account"+cAccount+"name"+cName+"address"+cAddress+"phone"+cPnumber);
+    			
+    			new CarGui();
     	}
 	}
 
 
 }
+
